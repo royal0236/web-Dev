@@ -51,7 +51,6 @@
     </ul>
     <table>
       <colgroup>
-        <col style="background-color: aqua" />
         <tr>
           <th>Name</th>
           <th>Age</th>
@@ -69,18 +68,18 @@
         </tr>
       </colgroup>
     </table>
-    <form action="/submit" method="post">
+    <form action="submit" method="post">
       <label for="username">Username:</label>
       <input type="text" name="" id="username" required />
       <br /><br />
       <label for="password">Password</label>
       <input type="password" name="password" id="password" required />
       <br /><br />
-      <label>Gender:</label>
+      <!-- <label>Gender:</label>
       <input type="radio" id="male" name="gender" value="male" />
       <label for="male">Male</label>
       <input type="radio" id="female" name="gender" value="female" />
-      <label for="female">Female</label>
+      <label for="female">Female</label> -->
       <br /><br />
       <input type="checkbox" value="checkbox" />
       <!-- Submit button -->
@@ -99,6 +98,65 @@
       <input type="submit" name="" id="" value="submit">
       <label for=""></label>
     </form>
+    <br><br>
+    <form>
+            <label for="name">NAME</label>
+      <input type="text">
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label>
+    <input type="checkbox" name="Html" id="Skills">
+    <label for="Skills">HTML</label>
+    <input type="checkbox" name="CSS" id="SkillsS">
+    <label for="SkillsS">CSS</label>
+    <input type="submit" name="button" id="">
+    </form>
+    <br>
+    <div>
+    <form>
+      <div>
+      <caption>Registration Form</caption>
+      </div>
+      <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required placeholder="Enter your name" maxlength="7" min="5">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required placeholder="Email">
+       <select>
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JAVASCRIPT</option>
+       </select>
+       </div>
+       <br>
+       <textarea rows="4" cols="30""></textarea>
+       <label for="submit">Submit</label>
+       <input type="submit" name="submit" id="submit">
+    </form>
+    </div>
+    <br>
+    <section>
+     <header>This is About Header Tag</header>
+    </section>
+      <nav>
+     <a href="https://www.youtube.com" target="_blank">Youtube</a>
+     </nav>
+     <main>
+     <section>
+      <h2>Blog Posts</h2>
+      <p>This is about the Blog posts.</p>
+     </section>
+     <section>
+      <h2>About</h2>
+      <p>This is the main page content of the page</p>
+     </section>
+    </main>
+   <footer>
+    <p>This is the footer of the page.</p>
+   </footer>
 
-  </body>
+
+    
+</body>
   </html>
