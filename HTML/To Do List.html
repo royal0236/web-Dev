@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Styled To-Do List</title>
+    <link rel="stylesheet" href="../CSS/To Do List.css">
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    
+    <ul class="todo-list">
+        <!-- Task 1: Wake Up with subtasks -->
+        <li>
+            <input type="checkbox" id="wake-up">
+            <label for="wake-up">Wake-Up</label>
+            
+            <!-- Subtasks nested properly INSIDE the li -->
+            <ul class="sub-item">
+                <li><a href="#" target="_blank">Early Morning Wake Up</a></li>
+            </ul>
+        </li>
+        
+        <!-- Task 2: College with subtasks -->
+        <li>
+            <input type="checkbox" id="cllg">
+            <label for="cllg">College</label>
+            
+            <ul class="sub-item">
+                <li><a href="#" target="_blank">Package College Bag</a></li>
+            </ul>
+        </li>
+        
+        <!-- Task 3: Java with subtasks -->
+        <li>
+            <input type="checkbox" id="java">
+            <label for="java">Java</label>
+            
+            <ul class="sub-item">
+                <li><a href="#" target="_blank">Practice Problems</a></li>
+            </ul>
+        </li>
+        
+        <!-- Task 4: Development with subtasks -->
+        <li>
+            <input type="checkbox" id="dev">
+            <label for="dev">Development</label>
+            
+            <ul class="sub-item">
+                <li><a href="#" target="_blank">Project's</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

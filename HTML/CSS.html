@@ -22,12 +22,45 @@
             .p {
   margin-top: 20px;
   border: 2px solid black;
+
 }
+.linear-gradient{
+  background: linear-gradient(to right,  red, blue , green , black , white);
+  height: 40vh;
+}
+
+.radial-gradient{
+  background: radial-gradient(circle closest-side at center, red, yellow 50%, green);
+  height: 60vh;
+}
+
+
+   .box{
+        border: 1px solid black;
+        padding: 10px;
+        margin: 2px;
+        background-color: aqua;
+        text-align: center;
+         width: 200px;
+         border-top: 10px solid red;
+        border-right: 10px dashed green;
+        border-bottom: 10px dotted blue;
+        border-left: 10px double purple;
+        outline: 3px solid gold;
+        border-radius: 10px;
+       
+      }
        </style>
 
 </head>
 <body>
-    
+  <div>
+    <p class="box">BOX</p>
+  </div>
+  <br>
+     <div class="linear-gradient"></div>
+     <hr>
+     <div class="radial-gradient"></div>
 <nav class="navbar">
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
@@ -60,5 +93,6 @@
 <p>Paragraph two</p>
 <p>Paragraph three</p>
 </div>
+   
 </body>
 </html>

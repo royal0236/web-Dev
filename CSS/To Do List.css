@@ -1,0 +1,196 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff0f3;  /* Softer than bright pink */
+    padding: 50px 20px;  /* Responsive padding */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1 {
+    margin: 0 0 30px 0;
+    font-family: Impact, 'Arial Black', sans-serif;
+    font-size: clamp(28px, 5vw, 42px);  /* Responsive font */
+    font-weight: normal;
+    text-align: center;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ff69b4;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* ===== TODO LIST CONTAINER ===== */
+.todo-list {
+    list-style: none;
+    width: min(400px, 90%);  /* Responsive width */
+    margin: 0 auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+    border: 1px solid #ffe4ec;
+}
+
+/* ===== LIST ITEMS ===== */
+.todo-list > li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff9fc;
+    border-radius: 10px;
+    border-left: 4px solid #ff69b4;
+    transition: all 0.3s ease;
+}
+
+.todo-list > li:hover {
+    background: #fff0f5;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+}
+
+/* ===== CHECKBOX STYLING ===== */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: #ff69b4;  /* Makes checkbox pink in modern browsers */
+    transform: scale(1.1);
+    vertical-align: middle;
+}
+
+/* ===== LABELS ===== */
+label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: color 0.2s;
+}
+
+/* When checkbox is checked - style the label */
+input[type="checkbox"]:checked + label {
+    color: #999;
+    text-decoration: line-through;
+    text-decoration-color: #ff69b4;
+    text-decoration-thickness: 2px;
+}
+
+/* ===== SUBTASKS (Nested Lists) ===== */
+.sub-item {
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-left: 10px;
+    border-left: 2px dashed #ffb6c1;
+}
+
+.sub-item li {
+    margin: 8px 0;
+    padding: 5px 0 5px 10px;
+    background: #ffe4ec;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.sub-item li:hover {
+    background: #ffd0dc;
+}
+
+/* ===== LINK STYLING (Your original good work!) ===== */
+a {
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: all 0.2s;
+}
+
+a:link {
+    color: #2196F3;  /* Softer blue */
+}
+
+a:visited {
+    color: #9c27b0;  /* Purple instead of gray */
+}
+
+a:hover {
+    color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 3px;
+}
+
+a:focus {
+    outline: 2px solid #ffb6c1;
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+a:active {
+    color: #f44336;
+}
+
+/* ===== SUBTASK LINKS SPECIFIC ===== */
+.sub-item a {
+    display: block;
+    padding: 5px 15px;
+}
+
+.sub-item a:hover {
+    background: #ffb6c1;
+    color: #333;
+}
+
+/* ===== ACCESSIBILITY ===== */
+/* Focus visible for keyboard navigation */
+:focus-visible {
+    outline: 3px solid #ff69b4;
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .todo-list {
+        padding: 15px;
+    }
+    
+    .todo-list > li {
+        padding: 12px;
+    }
+    
+    label {
+        font-size: 16px;
+    }
+    
+    .sub-item {
+        margin-left: 15px;
+    }
+}
+
+/* ===== COMPLETED TASKS (Optional) ===== */
+/* Add this class with JavaScript later */
+.completed {
+    opacity: 0.7;
+    background: #f0f0f0;
+}
+
+.completed label {
+    text-decoration: line-through;
+    color: #999;
+}
